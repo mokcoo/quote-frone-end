@@ -1,0 +1,10 @@
+<!-- <mat-tab-group>
+    <mat-tab label="Sign In"><a routerLink="/login" routerLinkActive="active">Sign In</a></mat-tab>
+    <mat-tab label="Sign Up"><a routerLink="/signup" routerLinkActive="active">Sign Up</a></mat-tab>
+</mat-tab-group> -->
+<nav mat-tab-nav-bar ngClass = "tabs">
+    <a mat-tab-link routerLink="/login" routerLinkActive="active-link">Sign In</a>
+    <a mat-tab-link routerLink="/signup" routerLinkActive="active-link">Sign Up</a>
+ </nav>  
+
+<router-outlet></router-outlet>

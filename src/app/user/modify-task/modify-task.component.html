@@ -1,0 +1,54 @@
+
+<h1>Modify Current Task</h1>
+<form #modifyForm = "ngForm" class = "modifyTask" name ="ModifyForm" (ngSubmit)="modifyTask(QuoteType.value,Description.value,DueDate.value,Premium.value)">
+    <div>
+        <mat-form-field appearance="fill" class="qinput">
+            <mat-label>Select QuoteType</mat-label>
+            <mat-select [formControl]="QuoteType" placeholder={{valueQuote.QuoteType}}>
+              <mat-option value="Auto">Auto</mat-option>
+              <mat-option value="Boat">Boat</mat-option>
+              <mat-option value="House">House</mat-option>
+              <mat-option value="General">General</mat-option>
+    
+            </mat-select>
+            <mat-error *ngIf="QuoteType.hasError('required')">
+                QuoteType is <strong>required</strong>
+              </mat-error>
+          </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="qinput">
+        <mat-label>Description</mat-label>
+        <input matInput [formControl] = "Description" type="text" name ="Description" placeholder={{valueQuote.Description}}>
+        <mat-error *ngIf="Description.hasError('required')">
+            Description is <strong>required</strong>
+          </mat-error>
+    </mat-form-field>
+
+    </div>
+    <div>
+        <mat-form-field appearance="fill" class="qinput">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" [formControl] = "DueDate" type="text" name = "DueDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          
+        <mat-error *ngIf="DueDate.hasError('required')">
+            DueDate is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="qinput">
+        <mat-label>Premium</mat-label>
+        <input matInput [formControl] = "Premium" type="text" name = "Premium" placeholder={{valueQuote.Premium}}>
+        <mat-error *ngIf="Premium.hasError('required')">
+            Premium is <strong>required</strong>
+          </mat-error>
+    </mat-form-field>
+    </div>
+    <div class="sbutton">
+    <button mat-flat-button [disabled]="QuoteType.value.length==0||Description.value.length==0||DueDate.value.length==0||Premium.value.length==0" color="primary">Modify</button>
+</div>
+</form>

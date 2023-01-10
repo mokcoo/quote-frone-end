@@ -1,0 +1,63 @@
+
+<div>
+    <div class="picture">
+        <img *ngIf="detailQuote.QuoteType=='Auto'" src ="assets/images/Auto.jpg">
+    </div>
+    <div class="picture">
+        <img *ngIf="detailQuote.QuoteType=='House'" src ="assets/images/House.jpg">
+    </div>
+    <div class="picture">
+        <img *ngIf="detailQuote.QuoteType=='Boat'" src ="assets/images/Boat.jpg">
+    </div>
+    <div class="picture">
+        <img *ngIf="detailQuote.QuoteType=='General'" src ="assets/images/General.jpg">
+    </div>
+<div class="dtable">
+    <div class="nameh">
+    <p>QuoteID</p>
+    </div>
+    <div class="namep">
+        <p>{{detailQuote.QuoteID}}</p>
+    </div>
+</div>
+<br>
+<div class="dtable">
+    <div class="nameh">
+        <p>QuoteType</p>
+    </div>
+    <div class="namep">
+        <p>{{detailQuote.QuoteType}}</p>
+    </div>
+</div>
+<br>
+
+<div class="dtable">
+    <div class="nameh">
+        <p>Description</p>
+    </div>
+    <div class="namep">
+        <p>{{detailQuote.Description}}</p>
+    </div>
+</div>
+<br>
+
+<div class="dtable">
+    <div class="nameh">
+        <p>DueDate</p>
+    </div>
+    <div class="namep">
+        <p>{{detailQuote.DueDate}}</p>
+    </div>
+</div>
+<br>
+
+<div class="dtable">
+    <div class="nameh">
+        <p>Premium</p>
+    </div>
+    <div class="namep">
+        <p>{{detailQuote.Premium}}</p>
+    </div>
+</div>
+</div>
+

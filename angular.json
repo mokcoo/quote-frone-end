@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,6 +62,7 @@
           "configurations": {
             "production": {
               "browserTarget": "quoteapp:build:production"
+              
             },
             "development": {
               "browserTarget": "quoteapp:build:development"
@@ -87,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3532d041-c3e5-49a9-9cf2-1b608d02a940"
   }
 }

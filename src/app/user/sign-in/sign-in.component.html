@@ -1,0 +1,26 @@
+<div *ngIf="isLoginError">
+    <i>error</i>
+</div>
+<div class="login">
+<form #loginForm="ngForm" class="col s12 white" (ngSubmit)="OnSubmit(UserName.value,Password.value)">
+    <mat-form-field class="example-full-width">
+        <mat-label><i class="material-icons prefix">account_circle</i>Email</mat-label>
+        <input matInput type="text" [formControl]="UserName">
+        <mat-error *ngIf="UserName.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+            <mat-label><i class="material-icons prefix">vpn_key</i>Password</mat-label>
+            <input matInput type="password" [formControl]="Password">
+            <mat-error *ngIf="Password.hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+    </mat-form-field>
+    <div class="loginl">
+    <button mat-fab extended color="primary" [disabled]="UserName.value.length==0||Password.value.length==0">
+        Login
+      </button>
+    </div>
+</form>
+</div>

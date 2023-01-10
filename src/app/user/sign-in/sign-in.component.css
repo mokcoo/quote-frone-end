@@ -1,0 +1,21 @@
+ form {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.login{
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.password{
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    display:flex;
+}
+.loginl{
+  padding-left: 300px;
+}

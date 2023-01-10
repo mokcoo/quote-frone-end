@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+  }
+ form > input {
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  .row{
+    display:flex;
+    flex-direction: column;
+  }
+.main{
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+}
+.signl{
+  padding-left: 300px;
+}

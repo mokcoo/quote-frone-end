@@ -1,0 +1,11 @@
+.dtable{
+    display:flex;
+    flex-direction: row;
+}
+.nameh{
+    width:400px;
+    color:brown;
+}
+.namep{
+    border-radius: 50px;
+}
