@@ -6,4 +6,4 @@ QuoteID should be the primary key and have the auto increment method, QuoteType 
 
 Then, in the service folder, change the rootUrl to the url of your web api.
 
-Then, use ng-serve to run both your backend and frontend to test this project.
+Then, run both your backend and frontend to test this project.
